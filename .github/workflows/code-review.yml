@@ -78,7 +78,7 @@ jobs:
 
       - name: Start Review Agent
         env:
-          PAT_OF_GITHUB: ${{ secrets.PAT_OF_GITHUB }}  # Use secret instead of hardcoding
+          PAT_OF_GITHUB: ${{ secrets.PAT_OF_GITHUB }}  # Use secret instead of hardcodings
         run: |
           nohup ./review-agent --pat "$PAT_OF_GITHUB" > agent.log 2>&1 &
           sleep 5  # Ensure the service has started
